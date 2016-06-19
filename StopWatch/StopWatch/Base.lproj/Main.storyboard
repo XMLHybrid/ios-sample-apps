@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIM-nH-88b">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0QX-i1-wBE"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="StopWatch" id="Yql-Yo-dxa">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="play" id="HBt-bA-D0g">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="2vc-6X-KeG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWl-ab-1x2">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cmb-Mu-z1c"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="uKw-cm-kkI">
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" id="kiz-tY-0dh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mNf-k4-Sjb"/>
+                                    <barButtonItem systemItem="pause" id="Qve-ds-9Pn">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="MtI-gA-HJK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgg-7N-cFN">
+                                <rect key="frame" x="130" y="186" width="341" height="227"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="227" id="VpS-VB-AEN"/>
+                                    <constraint firstAttribute="width" constant="341" id="Wg5-Bo-GTE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="90"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PWl-ab-1x2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1Oi-Vg-txf"/>
+                            <constraint firstItem="NIM-nH-88b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="HuP-YS-zgs"/>
+                            <constraint firstItem="NIM-nH-88b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="K4h-Yd-vJn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NIM-nH-88b" secondAttribute="trailing" constant="-20" id="Wa1-3s-YOw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PWl-ab-1x2" secondAttribute="trailing" constant="-20" id="YFm-Le-XeH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PWl-ab-1x2" secondAttribute="bottom" id="Zul-2I-R8q"/>
+                            <constraint firstItem="Fgg-7N-cFN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="la9-0D-iCQ"/>
+                            <constraint firstItem="Fgg-7N-cFN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qxF-gJ-hL1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="Fgg-7N-cFN" id="cJh-cr-ULK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="223"/>
+        </scene>
+    </scenes>
+</document>
